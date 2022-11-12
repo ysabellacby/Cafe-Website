@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="computation.js"></script>
+    <title>Café Europa</title>
+</head>
+
+<body>
+    <div id="date"></div>
+    <header><img src="logo.png"></header>
+    <main>
+        <div id="welcome">
+            <p>Welcome to Cafe Europa</p>
+        </div>
+
+        <div id="instruction">
+            <p>For orders for pick up, kindly fill out the order form below.</p>
+        </div>
+
+        <form>
+            <table>
+                <tr>
+                    <td>First Name: </td>
+                    <td><input type="text" id="firstname" class="reqd" size="20" autofocus placeholder="Firstname"
+                            pattern="^[a-zA-Z -]+$"></input></td>
+                </tr>
+                <tr>
+                    <td>Last Name: </td>
+                    <td><input type="text" id="lastname" class="reqd" size="20" placeholder="Lastname"
+                            pattern="^[a-zA-Z -]+$"></input></td>
+                </tr>
+                <tr>
+                    <td>Contact Number: </td>
+                    <td><input type="tel" id="phone" class="reqd" placeholder="###-###-####"
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"> </td>
+                </tr>
+                <tr>
+                    <td>Pickup Date/Time: </td>
+                    <td><input type="datetime-local" id="date&time"></td>
+                </tr>
+                
+            </table>
+
+            <br>
+            <div id="menu">
+                <p>Menu Items</p>
+                <form id="menu-items">
+                    <table>
+                        <p>Neapolitan Style Pizza:</p>
+                        <tr>
+                            <td>Margherita Pizza</td>
+                            <td>$12.00</td>
+                            <td><input type="number" value="0" id="margherita"></td>
+                        </tr>
+                        <tr>
+                            <td>Quattro Formaggi</td>
+                            <td>$12.50</td>
+                            <td><input type="number" value="0" id="qformaggi"></td>
+                        </tr>
+                        <tr>
+                            <td>Capricciosa:</td>
+                            <td>$13.00</td>
+                            <td><input type="number" value="0" id="capricciosa"></td>
+                        </tr>
+                    </table>
+
+                    <table>
+                        <p>Sandwich Choices:</p>
+                        <tr>
+                            <td>Schnitzel</td>
+                            <td>$8.50</td>
+                            <td><input type="number" value="0" id="schnitzel"></td>
+                        </tr>
+                        <tr>
+                            <td>Mixed Grill</td>
+                            <td>$9.50</td>
+                            <td><input type="number" value="0" id="mixed-grill"></td>
+                        </tr>
+                        <tr>
+                            <td>Big Beef on a Bun</td>
+                            <td>$10.00</td>
+                            <td><input type="number" value="0" id="beef-bun"></td>
+                        </tr>
+                    </table>
+
+                    <table>
+                        <p>Bevarages:</p>
+                        <tr>
+                            <td>Coffee </td>
+                            <td>$2.00</td>
+                            <td><input type="number" value="0" id="coffee"></td>
+                        </tr>
+                        <tr>
+                            <td>Latte</td>
+                            <td>$2.50</td>
+                            <td><input type="number" value="0" id="latte"></td>
+                        </tr>
+                        <tr>
+                            <td>Soft drink</td>
+                            <td>$1.75</td>
+                            <td><input type="number" value="0" id="soft-drink"></td>
+                        </tr>
+                    </table>
+                    <input type="submit" value="Submit" onClick="validateForm();return false;compute();"></input>
+                   
+                </form>
+            </div>
+
+            <div id="summary">
+                <div id="details"></div>
+                <div id="orders"></div>
+            </div>
+
+    </main>
+</body>
+
+</html>
